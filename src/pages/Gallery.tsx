@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Instagram, Share2, X } from "lucide-react";
 import Layout from "@/components/Layout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroGallery from "@/assets/hero-gallery.jpg";
 import lobbyImg from "@/assets/hotel-lobby.jpg";
 import gardenImg from "@/assets/hotel-garden.jpg";
 import restaurantImg from "@/assets/hotel-restaurant.jpg";
@@ -29,8 +30,12 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <section className="pt-32 pb-16 bg-charcoal text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroGallery} alt="Gallery" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-charcoal/70" />
+        </div>
+        <div className="relative container mx-auto px-6 text-center">
           <p className="text-sm font-body tracking-[0.3em] text-gold uppercase mb-4">Instagramable</p>
           <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4">Gallery</h1>
           <div className="gold-line w-16 mx-auto mb-6" />

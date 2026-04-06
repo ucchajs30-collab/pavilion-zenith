@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Bed, Bath, Wind, Tv, Eye } from "lucide-react";
 import Layout from "@/components/Layout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroRooms from "@/assets/hero-rooms.jpg";
 import roomDeluxe from "@/assets/room-deluxe.jpg";
 import roomTwin from "@/assets/room-twin.jpg";
 import roomFamily from "@/assets/room-family.jpg";
@@ -36,8 +37,12 @@ const featureIcon = (f: string) => {
 
 const Rooms = () => (
   <Layout>
-    <section className="pt-32 pb-16 bg-charcoal text-primary-foreground">
-      <div className="container mx-auto px-6 text-center">
+    <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={heroRooms} alt="Rooms & Suites" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-charcoal/70" />
+      </div>
+      <div className="relative container mx-auto px-6 text-center">
         <p className="text-sm font-body tracking-[0.3em] text-gold uppercase mb-4">Accommodations</p>
         <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4">Rooms & Suites</h1>
         <div className="gold-line w-16 mx-auto mb-6" />
