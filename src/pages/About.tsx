@@ -1,6 +1,8 @@
 import { Bed, Bath, Wind, Tv, Wifi, Clock, Shield, Heart } from "lucide-react";
 import Layout from "@/components/Layout";
+import PageHero from "@/components/PageHero";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroAbout from "@/assets/hero-about.jpg";
 import facadeImg from "@/assets/hotel-facade.jpg";
 import lobbyImg from "@/assets/hotel-lobby.jpg";
 
@@ -13,13 +15,11 @@ const values = [
 
 const About = () => (
   <Layout>
-    <section className="pt-32 pb-16 bg-charcoal text-primary-foreground">
-      <div className="container mx-auto px-6 text-center">
-        <p className="text-sm font-body tracking-[0.3em] text-gold uppercase mb-4">Our Story</p>
-        <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4">About Us</h1>
-        <div className="gold-line w-16 mx-auto" />
-      </div>
-    </section>
+    <PageHero
+      image={heroAbout}
+      subtitle="Our Story"
+      title="About Us"
+    />
 
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">

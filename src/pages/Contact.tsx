@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Send } from "lucide-react";
 import Layout from "@/components/Layout";
+import PageHero from "@/components/PageHero";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -14,16 +16,12 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="pt-32 pb-16 bg-charcoal text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm font-body tracking-[0.3em] text-gold uppercase mb-4">Get in Touch</p>
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <div className="gold-line w-16 mx-auto mb-6" />
-          <p className="font-body text-primary-foreground/60 max-w-lg mx-auto">
-            We'd love to hear from you. Reach out for reservations, inquiries, or anything else.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image={heroContact}
+        subtitle="Get in Touch"
+        title="Contact Us"
+        description="We'd love to hear from you. Reach out for reservations, inquiries, or anything else."
+      />
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">

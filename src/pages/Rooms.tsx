@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Bed, Bath, Wind, Tv, Eye } from "lucide-react";
 import Layout from "@/components/Layout";
+import PageHero from "@/components/PageHero";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroRooms from "@/assets/hero-rooms.jpg";
 import roomDeluxe from "@/assets/room-deluxe.jpg";
 import roomTwin from "@/assets/room-twin.jpg";
 import roomFamily from "@/assets/room-family.jpg";
@@ -36,16 +38,12 @@ const featureIcon = (f: string) => {
 
 const Rooms = () => (
   <Layout>
-    <section className="pt-32 pb-16 bg-charcoal text-primary-foreground">
-      <div className="container mx-auto px-6 text-center">
-        <p className="text-sm font-body tracking-[0.3em] text-gold uppercase mb-4">Accommodations</p>
-        <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4">Rooms & Suites</h1>
-        <div className="gold-line w-16 mx-auto mb-6" />
-        <p className="font-body text-primary-foreground/60 max-w-lg mx-auto">
-          Choose from our carefully curated selection of rooms, each designed for ultimate comfort.
-        </p>
-      </div>
-    </section>
+    <PageHero
+      image={heroRooms}
+      subtitle="Accommodations"
+      title="Rooms & Suites"
+      description="Choose from our carefully curated selection of rooms, each designed for ultimate comfort."
+    />
 
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
