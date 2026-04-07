@@ -22,7 +22,7 @@ const Home = () => (
     {/* Hero */}
     <section className="relative h-screen overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Mandarin Pavilion Hotel" className="w-[200%] h-[200%] max-w-none object-cover animate-kenburns" style={{ objectPosition: "center 20%", translate: "-25% -25%", scale: "0.5", transformOrigin: "center center" }} />
+        <img src={heroImg} alt="Mandarin Pavilion Hotel" className="w-[300%] h-[300%] max-w-none object-cover animate-kenburns" style={{ objectPosition: "center 20%", translate: "-33.33% -33.33%", scale: "0.333", transformOrigin: "center center" }} />
       </div>
       <div className="absolute inset-0 bg-gradient-hero" />
 
