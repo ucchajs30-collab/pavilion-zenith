@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Star, Shield, Wifi, Users, ArrowRight, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import heroImg from "@/assets/hotel-facade.jpg";
 import lobbyImg from "@/assets/hotel-lobby.jpg";
 import roomDeluxe from "@/assets/room-deluxe.jpg";
 import roomSuperior from "@/assets/room-superior.jpg";
@@ -21,9 +22,7 @@ const Home = () => (
     {/* Hero */}
     <section className="relative h-screen overflow-hidden">
       <div className="absolute inset-0">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-          <source src="/videos/hero-home.mp4" type="video/mp4" />
-        </video>
+        <img src={heroImg} alt="Mandarin Pavilion Hotel" className="w-full h-full object-cover animate-kenburns" />
       </div>
       <div className="absolute inset-0 bg-gradient-hero" />
 
