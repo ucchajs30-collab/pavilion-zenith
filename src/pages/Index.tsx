@@ -21,8 +21,8 @@ const Home = () => (
   <Layout>
     {/* Hero */}
     <section className="relative h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroImg} alt="Mandarin Pavilion Hotel" className="w-full h-full object-contain animate-kenburns bg-charcoal" style={{ objectPosition: "center center", transform: "scale(0.7)" }} />
+      <div className="absolute inset-[-15%]">
+        <img src={heroImg} alt="Mandarin Pavilion Hotel" className="w-full h-full object-cover animate-kenburns" style={{ objectPosition: "center 55%", transform: "scale(0.7)", transformOrigin: "center center" }} />
       </div>
       <div className="absolute inset-0 bg-gradient-hero" />
 
